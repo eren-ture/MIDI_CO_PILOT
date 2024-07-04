@@ -1,0 +1,9 @@
+INFO:root:Generation Task
+INFO:root:Using device: cpu
+INFO:root:Loaded data
+INFO:root:Model created... starting training!
+INFO:__main__:Epoch: 1
+	Train loss: nan
+	Val loss: nan
+	Epoch time = 541.9 seconds
+	ETA = 15716.0 seconds

@@ -1,0 +1,796 @@
+INFO:root:Generation Task
+INFO:root:Using device: cpu
+INFO:root:Loaded data
+INFO:root:Model created... starting training!
+INFO:data.Dataset:Processing: ./archive/Cher/Believe.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Cher/Believe.1.mid
+INFO:data.Dataset:Processing: ./archive/Arrested_Development/People_Everyday.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/John_Elton/Rocket_Man.3.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/John_Elton/Rocket_Man.3.mid
+INFO:data.Dataset:Processing: ./archive/Ottawan/Hands_Up.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Pet_Shop_Boys/Paninaro_95.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Pet_Shop_Boys/Paninaro_95.1.mid
+INFO:data.Dataset:Processing: ./archive/Sting/Desert_Rose.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Manfred_Mann/Davys_on_the_Road_Again.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Coolio/C_U_When_U_Get_There.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Chick_Corea/Sundance_Chick_Corea_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/LFO/Sex_U_Up_The_Way_You_Like_It_Radio_Edit_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Nine_Inch_Nails/Piggy.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Sailor/Girls_Girls_Girls.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Sailor/Girls_Girls_Girls.mid
+INFO:data.Dataset:Processing: ./archive/Amy_Grant/I_Will_Remember_You.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Roberta_Flack/The_First_Time_Ever_I_Saw_Your_Face.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Nek/Nemmeno_un_secondo.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Nek/Nemmeno_un_secondo.mid
+INFO:data.Dataset:Processing: ./archive/Three_Dog_Night/Joy_to_the_World.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Celentano/Ciao_ragazzi.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Celentano/Ciao_ragazzi.mid
+INFO:data.Dataset:Processing: ./archive/The_Blue_Diamonds/Ramona.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/The_Blue_Diamonds/Ramona.mid
+INFO:data.Dataset:Processing: ./archive/Creedence_Clearwater_Revival/I_Put_A_Spell_On_You.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Creedence_Clearwater_Revival/I_Put_A_Spell_On_You.mid
+INFO:data.Dataset:Processing: ./archive/George_Harrison/Crackerbox_Palace.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Stone_Temple_Pilots/Creep.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Roxette/Fading_Like_a_Flower_Every_Time_You_Leave_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Three_Cool_Cats.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/The_Surfaris/Wipe_Out.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Andre_van_Duin/Het_pizzalied_Effe_wachte..._.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Andre_van_Duin/Het_pizzalied_Effe_wachte..._.mid
+INFO:data.Dataset:Processing: ./archive/Midnight_Oil/Beds_Are_Burning.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Midnight_Oil/Beds_Are_Burning.mid
+INFO:data.Dataset:Processing: ./archive/Chris_Rea/Little_Blonde_Plaits.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Gene_Pitney/Every_Breath_I_Take.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Sinatra/Bewitched.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Biagio_Antonacci/Prima_di_tutto.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Biagio_Antonacci/Prima_di_tutto.mid
+INFO:data.Dataset:Processing: ./archive/Rossi_Vasco/Alba_chiara.4.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Rossi_Vasco/Alba_chiara.4.mid
+INFO:data.Dataset:Processing: ./archive/Pink_Floyd/Wish_You_Were_Here.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Humperdinck_Engelbert/There_Goes_My_Everything.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/ABBA/Mamma_Mia.3.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/ABBA/Mamma_Mia.3.mid
+INFO:data.Dataset:Processing: ./archive/The_Beatles/One_After_909.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Croce_Jim/Bad_Bad_Leroy_Brown.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Masini/Caro_babbo.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Masini/Caro_babbo.mid
+INFO:data.Dataset:Processing: ./archive/Kiss/War_Machine.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Roxette/Un_dia_sin_ti_Spending_My_Time_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Roxette/Im_Sorry.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Roxette/Im_Sorry.mid
+INFO:data.Dataset:Processing: ./archive/Crow_Sheryl/My_Favorite_Mistake.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Andre_Hazes/Italiaanse_medley.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/NOFX/Shes_Gone.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/NOFX/Shes_Gone.mid
+INFO:data.Dataset:Processing: ./archive/Johnny_Cash/Folsom_Prison_Blues.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Gordon_Lightfoot/Sundown.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Gordon_Lightfoot/Sundown.mid
+INFO:data.Dataset:Processing: ./archive/LIGABUE/Una_vita_da_mediano.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/LIGABUE/Una_vita_da_mediano.1.mid
+INFO:data.Dataset:Processing: ./archive/Inner_Circle/Rock_With_You.3.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Carpenters/Theres_A_Kind_Of_Hush.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Carpenters/Theres_A_Kind_Of_Hush.mid
+INFO:data.Dataset:Processing: ./archive/ABBA/Mamma_Mia.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Battisti_Lucio/La_canzone_del_sole.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Joe_Cocker/Unchain_My_Heart.2.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Joe_Cocker/Unchain_My_Heart.2.mid
+INFO:data.Dataset:Processing: ./archive/Nightcrawlers/Push_The_Feeling_On_MK_Dub_Revisted_Edit_.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Level_42/Forever_Now.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Duran_Duran/A_View_To_A_Kill.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Andy_Williams/Where_Do_I_Begin_Love_Story.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Journey/Send_Her_My_Love.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Right_Said_Fred/Dont_Talk_Just_Kiss.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Right_Said_Fred/Dont_Talk_Just_Kiss.mid
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Baby_Youre_a_Rich_Man.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Paul_de_Leeuw/Ik_wil_niet_dat_je_liegt.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Whitney_Houston/Exhale_Shoop_Shoop_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Billy_Joel/The_Longest_Time.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Berlin/Take_My_Breath_Away.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Berlin/Take_My_Breath_Away.1.mid
+INFO:data.Dataset:Processing: ./archive/Spice_Girls/Stop.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/John_Elton/Candle_in_the_Wind.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/John_Elton/Candle_in_the_Wind.mid
+INFO:data.Dataset:Processing: ./archive/Frank_Sinatra/Makin_Whoopie.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Zucchero/Senza_Una_Donna.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Paola_Turci/Solo_come_me.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Paola_Turci/Solo_come_me.mid
+INFO:data.Dataset:Processing: ./archive/Ellington/Sophisticated_Lady.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Dire_Straits/Walk_Of_Life.4.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Bruce_Hornsby/Walk_in_the_Sun.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Alice_in_Chains/Would.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Alice_in_Chains/Would.mid
+INFO:data.Dataset:Processing: ./archive/Bush/Comedown.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Green_Day/Coming_Clean.4.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Chicago/Make_Me_Smile.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Bryan_Adams/Cant_Stop_This_Thing_We_Started.2.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Bryan_Adams/Cant_Stop_This_Thing_We_Started.2.mid
+INFO:data.Dataset:Processing: ./archive/Jewel/Hands.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Bobby_Brown/Two_Can_Play_That_Game.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Depeche_Mode/Dreaming_of_Me.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Ellington/Moon_Mist.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Ellington/Moon_Mist.mid
+INFO:data.Dataset:Processing: ./archive/The_Moody_Blues/The_Story_in_Your_Eyes.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Zucchero/Non_ti_sopporto_piu.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Zucchero/Non_ti_sopporto_piu.mid
+INFO:data.Dataset:Processing: ./archive/Humperdinck_Engelbert/I_Wanna_Rock_You.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/R.E.M./The_Wake-Up_Bomb.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/R.E.M./The_Wake-Up_Bomb.mid
+INFO:data.Dataset:Processing: ./archive/Howard_Jones/Things_Can_Only_Get_Better.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Jimi_Hendrix/Third_Stone_From_the_Sun.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Nico_Landers/Liefde_in_de_nacht.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Metallica/Jump_in_the_Fire.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Die_Arzte/Friedenspanzer.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Roxette/How_Do_You_Do.4.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/The_Animals/The_House_of_the_Rising_Sun.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Gipsy_Kings/Baila_Me.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Gipsy_Kings/Baila_Me.1.mid
+INFO:data.Dataset:Processing: ./archive/Dr._Alban/Away_From_Home_short_.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Dr._Alban/Away_From_Home_short_.1.mid
+INFO:data.Dataset:Processing: ./archive/Whitney_Houston/Saving_All_My_Love_For_You.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Cher/Flamenco_Dance,_Part_2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Celentano/Senza_amore.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Celentano/Senza_amore.mid
+INFO:data.Dataset:Processing: ./archive/Allan_Theo/Lola.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Seal/Crazy.4.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Seal/Crazy.4.mid
+INFO:data.Dataset:Processing: ./archive/C.J._Lewis/Sweets_for_My_Sweet.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Pooh/Io_sono_vivo.2.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Pooh/Io_sono_vivo.2.mid
+INFO:data.Dataset:Processing: ./archive/Atkins_Chet/Yakety_Sax.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Morricone_Ennio/Luomo_Dellarmonica.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Morricone_Ennio/Luomo_Dellarmonica.1.mid
+INFO:data.Dataset:Processing: ./archive/Tracy_Byrd/The_Keeper_of_the_Stars.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Lenny_Kravitz/Heaven_Help.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Lenny_Kravitz/Heaven_Help.mid
+INFO:data.Dataset:Processing: ./archive/Imca_Marina/Bella_Italia.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Rednex/Cotton_Eyed_Joe.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Foo_Fighters/Breakout.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Foo_Fighters/Breakout.mid
+INFO:data.Dataset:Processing: ./archive/Elvis_Presley/Let_Me_Be_Your_Teddy_Bear.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Elvis_Presley/Let_Me_Be_Your_Teddy_Bear.mid
+INFO:data.Dataset:Processing: ./archive/Herman/Woodchoppers_Ball.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Toad_the_Wet_Sprocket/All_I_Want.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/The_Dave_Clark_Five/Glad_All_Over.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Elvis_Presley/Hound_Dog.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Led_Zeppelin/Sick_Again.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Santana/Shes_Not_There.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Santana/Shes_Not_There.mid
+INFO:data.Dataset:Processing: ./archive/Bryan_Adams/Summer_of_69.4.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Bryan_Adams/Summer_of_69.4.mid
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Helter_Skelter.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Kraftwerk/The_Model.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Mr._President/Co_Co_Jamboo.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Mr._President/Co_Co_Jamboo.1.mid
+INFO:data.Dataset:Processing: ./archive/Roxette/The_Look.7.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Roxette/The_Look.7.mid
+INFO:data.Dataset:Processing: ./archive/Madonna/Ray_of_Light.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Get_Off_My_Cloud.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/The_Manhattan_Transfer/Chanson_DAmour.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Inner_Circle/Games_People_Play.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Inner_Circle/Games_People_Play.mid
+INFO:data.Dataset:Processing: ./archive/Chaka_Khan/Im_Every_Woman.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/De_Dijk/Ik_kan_het_niet_alleen.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Raf/Inevitabile_follia.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Raf/Inevitabile_follia.mid
+INFO:data.Dataset:Processing: ./archive/Masini/Le_ragazze_serie.2.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Jimmy_Buffett/Why_Dont_We_Get_Drunk_And_Screw_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/ABBA/Name_of_the_Game.5.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/ABBA/Name_of_the_Game.5.mid
+INFO:data.Dataset:Processing: ./archive/Moby/God_Moving_Over_the_Face_of_the_Waters.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Borg_Andy/Ich_brauch_ein_bisschen_Gluck.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Borg_Andy/Ich_brauch_ein_bisschen_Gluck.1.mid
+INFO:data.Dataset:Processing: ./archive/Neil_Diamond/Play_Me.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Tozzi/Io_muoio_di_te.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Tozzi/Io_muoio_di_te.1.mid
+INFO:data.Dataset:Processing: ./archive/Chic/Good_Times.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Zucchero/Rispetto.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Zucchero/Rispetto.1.mid
+INFO:data.Dataset:Processing: ./archive/Christie_Lou/Lightning_Strikes_Again.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Ross/You_Cant_Hurry_Love.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/blink-182/All_the_Small_Things.3.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Smokie/Mexican_Girl.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Jackson_Michael/Billie_Jean.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Jackson_Michael/Billie_Jean.mid
+INFO:data.Dataset:Processing: ./archive/Smash_Mouth/All_Star.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Peter_Gabriel/Lead_a_Normal_Life.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Annie_Lennox/Sweet_Dreams.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Annie_Lennox/Sweet_Dreams.1.mid
+INFO:data.Dataset:Processing: ./archive/Martha_Reeves/Love_Is_Like_a_Heat_Wave.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/The_Monkees/Im_A_Believer.6.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Ricky_Martin/Livin_La_Vida_Loca.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Ricky_Martin/Livin_La_Vida_Loca.mid
+INFO:data.Dataset:Processing: ./archive/Duke/Im_So_in_Love_With_You.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Barry_Manilow/Copacabana.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Barry_Manilow/Copacabana.mid
+INFO:data.Dataset:Processing: ./archive/ABBA/I_Do,_I_Do,_I_Do,_I_Do.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Nomadi/Canzone_per_i_desaparecidos.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Nomadi/Canzone_per_i_desaparecidos.mid
+INFO:data.Dataset:Processing: ./archive/Zero/Si_sta_facendo_notte.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Zero/Si_sta_facendo_notte.mid
+INFO:data.Dataset:Processing: ./archive/Enya/Ebudae.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Romina_Power_Al_Bano/Felicita.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Romina_Power_Al_Bano/Felicita.mid
+INFO:data.Dataset:Processing: ./archive/Tozzi/Il_grido.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Tozzi/Il_grido.mid
+INFO:data.Dataset:Processing: ./archive/Nomadi/Stagioni.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Korn/No_Place_to_Hide.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Korn/No_Place_to_Hide.mid
+INFO:data.Dataset:Processing: ./archive/Bananarama/Venus.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Foo_Fighters/Up_in_Arms.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Foo_Fighters/Up_in_Arms.1.mid
+INFO:data.Dataset:Processing: ./archive/Eagles/Take_It_Easy.3.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Sugar_Ray/Fly.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Procol_Harum/A_Salty_Dog.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Pooh/Un_grande_amore.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Pooh/Un_grande_amore.mid
+INFO:data.Dataset:Processing: ./archive/Love_Unlimited_Orchestra/Love_Theme.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Bon_Jovi/Santa_Fe.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Crosby,_Stills,_Nash_and_Young/Our_House.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/George_Baker_Selection/Una_Paloma_Blanca.2.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/George_Baker_Selection/Una_Paloma_Blanca.2.mid
+INFO:data.Dataset:Processing: ./archive/Rick/E_Dez_E_Cem_E_Mil.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Rick/E_Dez_E_Cem_E_Mil.mid
+INFO:data.Dataset:Processing: ./archive/Zucchero/Blu.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Zucchero/Blu.1.mid
+INFO:data.Dataset:Processing: ./archive/Earth,_Wind_and_Fire/September_bonus_track_.4.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Earth,_Wind_and_Fire/September_bonus_track_.4.mid
+INFO:data.Dataset:Processing: ./archive/The_Grass_Roots/Two_Divided_by_Love.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/The_Grass_Roots/Two_Divided_by_Love.mid
+INFO:data.Dataset:Processing: ./archive/Bombalurina/Itsy_Bits_V_Teeny_Weeny_Yellow_Polka_Dot_Bikini.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Bombalurina/Itsy_Bits_V_Teeny_Weeny_Yellow_Polka_Dot_Bikini.mid
+INFO:data.Dataset:Processing: ./archive/Astrud_Gilberto/The_Girl_From_Ipanema_Garota_de_Ipanema_.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Angelo_Branduardi/Vanita_di_vanita.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Angelo_Branduardi/Vanita_di_vanita.mid
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Brown_Sugar.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/The_Rolling_Stones/Brown_Sugar.1.mid
+INFO:data.Dataset:Processing: ./archive/Mariah_Carey/Babydoll.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Mariah_Carey/Babydoll.mid
+INFO:data.Dataset:Processing: ./archive/John_Paul_Young/Love_is_in_the_Air.3.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Aaron_Neville/For_the_Good_Times.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Howard_Carpendale/Hello_Again.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Foo_Fighters/Walking_After_You.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Foo_Fighters/Walking_After_You.mid
+INFO:data.Dataset:Processing: ./archive/U96/Love_Religion.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Seal/Kiss_From_a_Rose.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Frankie_Valli/Grease.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Los_Del_Rio/Macarena.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Fool_to_Cry.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/The_Rolling_Stones/Fool_to_Cry.mid
+INFO:data.Dataset:Processing: ./archive/Ace_of_Base/Dont_Turn_Around.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Bob_Dylan/Rainy_Day_Women_12_35.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Dire_Straits/Walk_Of_Life.6.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Dire_Straits/Walk_Of_Life.6.mid
+INFO:data.Dataset:Processing: ./archive/Rick_Astley/Never_Gonna_Give_You_Up.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Nowhere_Man.3.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Brassens_Georges/Pensees_des_morts.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Paul_McCartney/Ebony_and_Ivory.1.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Paul_McCartney/Ebony_and_Ivory.1.mid
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Shes_Leaving_Home.4.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Zucchero/Overdose_damore_.3.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Zucchero/Overdose_damore_.3.mid
+INFO:data.Dataset:Processing: ./archive/Tool/Flood.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Green_Day/Welcome_to_Paradise.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Green_Day/Welcome_to_Paradise.mid
+INFO:data.Dataset:Processing: ./archive/Elvis_Presley/Puppet_on_a_String.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Four_Tops/Its_the_Same_Old_Song.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Beck/Jack-Ass.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Truncated
+INFO:data.Dataset:Processing: ./archive/Chris_Isaak/Wicked_Game.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/J.J._Cale/Cocaine.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/J.J._Cale/Cocaine.mid
+INFO:data.Dataset:Processing: ./archive/Toto/Africa.6.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Metallica/Hero_of_the_Day.2.mid
+INFO:data.Dataset:Warning: No non-empty parts found for ./archive/Metallica/Hero_of_the_Day.2.mid
+INFO:data.Dataset:Processing: ./archive/Joe_Cocker/You_Are_So_Beautiful.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Mariah_Carey/Fantasy.1.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:Processing: ./archive/Cheap_Trick/Dream_Police.mid
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:	Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:	Padded

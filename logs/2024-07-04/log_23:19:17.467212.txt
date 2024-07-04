@@ -1,0 +1,4 @@
+INFO:root:Generation Task
+INFO:root:Using device: cpu
+INFO:root:Loaded data
+INFO:root:Model created... starting training!

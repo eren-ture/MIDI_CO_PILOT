@@ -1,0 +1,790 @@
+INFO:root:Generation Task
+INFO:root:Using device: cpu
+INFO:root:Loaded data
+INFO:root:Model created... starting training!
+INFO:data.Dataset:Processing: ./archive/Grateful_Dead/The_Eleven.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Madonna/Shanti_Ashtangi.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Doobie_Brothers/Listen_to_the_Music.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Guns_N_Roses/Yesterday_s.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/ABC/Poison_Arrow.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Celentano/Acqua_e_sale.1.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Led_Zeppelin/Friends.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Cant_Be_Seen.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Journey/Faithfully.3.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Inner_Circle/Sweat_A_La_La_La_Song_.2.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Collins_Phil/Do_You_Remember.3.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Led_Zeppelin/The_Rain_Song.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Blind_Melon/No_Rain.1.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Birthday.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Del_Shannon/Keep_Searchin.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Blondie/Rapture.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Pooh/Pensiero.1.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Faith_No_More/Epic.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Fleetwood_Mac/Little_Lies.3.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Ace_of_Base/All_That_She_Wants.4.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/John_Elton/Your_Song.4.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Roxette/Fading_Like_a_Flower_live_Brussels_22_10_2001_.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Charlie_Rich/The_Most_Beautiful_Girl.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Beach_Boys/I_Get_Around.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/883/Nella_notte.1.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/UZEB/New_Hit.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Roxette/Im_Sorry.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Fool_to_Cry.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Toni_Braxton/Youre_Makin_Me_High.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Rascel/Arrividerci_Roma.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Van_Halen/Jump.9.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Start_Me_Up.3.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Cameo/Back_and_Forth.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Jackson_Michael/Dance_Mix_1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Freddie_Mercury/The_Great_Pretender.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Brown_Sugar.2.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Soundgarden/Beyond_the_Wheel.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Luniz/I_Got_5_On_It.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Pointer_Sisters/Jump_For_My_Love_.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/ABC/Look_of_Love,_Part_1.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Bachman-Turner_Overdrive/You_Aint_Seen_Nothin_Yet.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 1370
+INFO:data.Dataset:Processing: ./archive/Elvis_Presley/Fever.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Crow_Sheryl/My_Favorite_Mistake.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Frans_Bauer/n_Dag_uit_duizend_dromen.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Marillion/Kayleigh.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Zero/Si_sta_facendo_notte.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Baby_Youre_a_Rich_Man.2.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Jean_Michel_Jarre/Calypso_Part_1_.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Gene_Pitney/Every_Breath_I_Take.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 608
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Dizzy_Miss_Lizzy.1.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Haley/Shake,_Rattle_And_Roll.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Roy_Orbison/Blue_Bayou.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Nightcrawlers/Push_The_Feeling_On_MK_Dub_Revisted_Edit_.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Alan_Parsons/Prime_Time.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Seal/Crazy.4.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Corrs/Closer.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Parker_Charlie/Just_One_of_Those_Things.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/ABBA/Dancing_Queen.3.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Venditti_Antonello/Roma_capoccia.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 544
+INFO:data.Dataset:Processing: ./archive/Olivia_Newton-John/Let_Me_Be_There.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Enya/The_Sun_in_the_Stream.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Deep_Purple/Rat_Bat_Blue.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Little_Tony/Ridera.1.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Jimi_Hendrix/Third_Stone_From_the_Sun.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Natalie_Imbruglia/Torn.3.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Frank_Sinatra/Makin_Whoopie.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Enya/Exile.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Cliff_Richard/Summer_Holiday.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Ellington/Sophisticated_Lady.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/George_Michael/Faith.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Gloria_Gaynor/Never_Can_Say_Goodbye.1.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Enya/China_Roses.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Tears_for_Fears/Shout.2.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Bush/Comedown.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Peter_Gabriel/Digging_in_the_Dirt.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Brunner_and_Brunner/Schenk_mir_diese_eine_Nacht.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Zucchero/Dune_mosse.1.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Jewel/Hands.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Supertramp/Give_a_Little_Bit.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 780
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Paperback_Writer.4.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Madonna/La_Isla_Bonita.2.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Alanis_Morissette/Head_Over_Feet.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Spyro_Gyra/Swamp_Thing.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Beck/Where_Its_At.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Mariah_Carey/The_Roof.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Duran_Duran/Save_a_Prayer.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Al_Jarreau/Roof_Garden.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/ARMSTRONG_LOUIS/Hello,_Dolly.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Lets_Spend_The_Night_Together.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Fun_Factory/Close_to_You.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Paul_Anka/Diana_feat._Ricky_Martin_.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Lou_Bega/Mambo_No._5_A_Little_Bit_Of..._.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Roxette/Joyride.2.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Dr._Alban/Away_From_Home_short_.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Whitney_Houston/Saving_All_My_Love_For_You.2.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Scott_Joplin/The_Entertainer_Rag_Time_Dance.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Pointer_Sisters/Dont_Walk_Away.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Oasis/Live_Forever.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Cure/Apart.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Mecano/Hijo_De_La_Luna.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Edwyn_Collins/A_Girl_Like_You.1.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Reinhardt_Django/Minor_Swing.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Olivia_Newton-John/Lets_Get_Physical.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/ABBA/Money,_Money,_Money.6.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Jon_Secada/Just_Another_Day.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Boys_Town_Gang/Cant_Take_My_Eyes_Off_You.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Your_Mother_Should_Know.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Sinatra/Bewitched.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Fleetwood_Mac/Gold_Dust_Woman.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Nick_Gilder/Hot_Child_in_the_City.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Enya/Cursum_Perficio.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Elvis_Presley/Let_Me_Be_Your_Teddy_Bear.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Rush/Cygnus_X-1_Book_II_Hemispheres_PreludeApollo-DionysusArmageddonCygnusThe_Sphere.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Nat_King_Cole/When_Your_Lover_Has_Gone.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Spencer_Davis_Group/Keep_On_Running.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/a-ha/The_Sun_Always_Shines_on_TV.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Helter_Skelter.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Rolling_Stones/Lady_Jane.1.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Genesis/Never_a_Time.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Pooh/Laltra_donna.1.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Madonna/Ray_of_Light.2.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Patsy_Cline/I_Fall_to_Pieces.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Ted_Nugent/Cat_Scratch_Fever.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Ricky_Nelson/Poor_Little_Fool.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Doors/Light_My_Fire.1.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Romina_Power_Al_Bano/Sha-e-o.1.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Seal/Kiss_From_a_Rose.1.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Beatles/And_Your_Bird_Can_Sing.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Hole/Softer,_Softest.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/James/Crimson_Clover.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Aqua/My_Oh_My.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Wonder_Stevie/Happy_Birthday.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Pink_Floyd/Another_Brick_in_the_Wall,_Part_2.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Bee_Gees/Jive_Talkin.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Sister_Sledge/All_American_Girls.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Tokens/The_Lion_Sleeps_Tonight.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Enya/Boadicea.1.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Moody_Blues/Your_Wildest_Dreams.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Because.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Alanis_Morissette/Right_Through_You.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Smash_Mouth/All_Star.1.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Enya/China_Roses.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Tommy_James/I_Think_Were_Alone_Now.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Carpenters/Close_to_You.3.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Miller/Chattanooga_Choo_Choo.3.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Matia_Bazar/Ce_tutto_un_mondo_intorno.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Equipe_84/Nel_cuore_nellanima.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Whats_the_New_Mary_Jane.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/The_Beatles/Ob-La-Di,_Ob-La-Da.5.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 529
+INFO:data.Dataset:Processing: ./archive/The_Police/Message_in_a_Bottle.5.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Notorious_B.I.G./Big_Poppa.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Helen_Reddy/Delta_Dawn.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Three_Dog_Night/Mama_Told_Me_Not_To_Come_.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Humperdinck_Engelbert/There_Goes_My_Everything.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Ruggeri/Peter_Pan.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Depeche_Mode/Enjoy_the_Silence.1.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Roxette/2_Cinnamon_Street.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/LIGABUE/Bambolina_e_barracuda.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Bread/Make_It_With_You.2.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Depeche_Mode/Fly_on_the_Windscreen_Final_.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/BND/Here_I_Go_Again.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Chaka_Demus/Twist_and_Shout.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/TURNER_TINA/Whatever_You_Want.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Love_Unlimited_Orchestra/Love_Theme.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Billy_Swan/I_Can_Help.1.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Right_Said_Fred/Im_Too_Sexy.3.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/ABBA/Super_Trouper.3.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Rick/E_Dez_E_Cem_E_Mil.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Zucchero/Blu.1.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Earth,_Wind_and_Fire/September_bonus_track_.4.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/The_Grass_Roots/Two_Divided_by_Love.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Bombalurina/Itsy_Bits_V_Teeny_Weeny_Yellow_Polka_Dot_Bikini.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Astrud_Gilberto/The_Girl_From_Ipanema_Garota_de_Ipanema_.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Green_Day/Coming_Clean.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Holly_Buddy/Look_at_Me.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Collins_Phil/Saturday_Night_and_Sunday_Morning.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Moby/Body_Rock.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Axelle_Red/Amoureuse_Ou_Pas.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Metallica/Wasting_My_Hate.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Michael_Walthius/Song_for_My_Children.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 1141
+INFO:data.Dataset:Processing: ./archive/The_Hollies/Bus_Stop.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 740
+INFO:data.Dataset:Processing: ./archive/Bjork/Bachelorette.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Christie_Lou/Lightning_Strikes_Again.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/4_Non_Blondes/Whats_Up.3.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 532
+INFO:data.Dataset:Processing: ./archive/Assia/Elle_Est_a_Toi.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Alabama/Im_in_a_Hurry.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Elvis_Presley/Return_to_Sender.3.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Nomadi/Stop_the_world_vogliamo_tornare_a_giocare_.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Michael_Jackson/Dont_Stop_Til_You_Get_Enough.mid, with 16 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/James/Call_Me_Irresponsible.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Michael_George/Father_Figure.1.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Eurythmics/There_Must_Be_an_Angel_Playing_With_My_Heart_.2.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Antoine/Les_elucubrations.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 730
+INFO:data.Dataset:Processing: ./archive/Genesis/Man_on_the_Corner.mid, with 8 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Spice_Girls/Holler.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 760
+INFO:data.Dataset:Processing: ./archive/Guns_N_Roses/Since_I_Don_t_Have_You.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Truncated, 1444
+INFO:data.Dataset:Processing: ./archive/U2/Sunday_Bloody_Sunday.2.mid, with 8 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Sheena_Easton/U_Got_the_Look.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/ZZ_Top/Legs.2.mid, with 4 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:Processing: ./archive/Adamo/Lei.mid, with 4 bars splits.
+INFO:data.Dataset:No non-empty parts found.
+INFO:data.Dataset:Processing: ./archive/Peter_Gabriel/Sledgehammer.3.mid, with 16 bars splits.
+INFO:data.Dataset:	Target:
+INFO:data.Dataset:		Padded
+INFO:data.Dataset:	Context:
+INFO:data.Dataset:		Padded

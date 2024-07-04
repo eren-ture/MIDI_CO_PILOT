@@ -1,0 +1,2 @@
+INFO:root:Generation Task
+INFO:root:Using device: cpu
