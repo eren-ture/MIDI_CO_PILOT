@@ -1,4 +1,4 @@
 **/logs
-data/archive
 **/__pycache__
 trial_notebook.ipynb
+**/archive

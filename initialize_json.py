@@ -68,10 +68,10 @@ print(f"{train_percentage} train data")
 train_data = data[:train_cutoff]
 test_data = data[train_cutoff:]
 
-train_file_path = "train_data.json"
+train_file_path = "data/train_data.json"
 with open(train_file_path, "w") as json_file:
     json.dump(train_data, json_file, indent=4)
 
-test_file_path = "test_data.json"
+test_file_path = "data/test_data.json"
 with open(test_file_path, "w") as json_file:
     json.dump(test_data, json_file, indent=4)

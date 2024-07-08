@@ -46,7 +46,7 @@ class MidiTransformer(nn.Module):
             dropout=dropout
         )
 
-        # self.ff = nn.Linear(embed_size, tgt_vocab_size)
+        self.ff = nn.Linear(embed_size, embed_size)
 
         self._init_weights()
 
@@ -66,12 +66,12 @@ class MidiTransformer(nn.Module):
             # src_mask=src_mask,
             # tgt_mask=tgt_mask,
             # None,
-            src_key_padding_mask=src_mask,
-            tgt_key_padding_mask=tgt_mask
+            src_key_padding_mask=src_mask.t(),
+            tgt_key_padding_mask=tgt_mask.t()
         )
 
-        return outs
-        # return self.ff(outs)
+        # return outs
+        return self.ff(outs)
 
     def encode(self, src, src_mask):
 

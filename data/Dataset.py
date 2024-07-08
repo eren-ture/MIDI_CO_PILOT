@@ -9,6 +9,7 @@ import json
 import os
 import logging
 from datetime import datetime
+
 class MidiDataset(Dataset):
     def __init__(self, json_dir, max_seq_len, debug=False):
         with open(json_dir, 'r') as data_json:
