@@ -17,8 +17,7 @@ class MidiDataset(Dataset):
         self.max_seq_len = max_seq_len
 
         self.debug = debug
-        if self.debug:
-            self.logger = logging.getLogger(__name__)
+        self.logger = logging.getLogger(__name__)
         
     def __len__(self):
         return len(self.data)
@@ -29,21 +28,26 @@ class MidiDataset(Dataset):
         artist = data_point['Artist']
         song_name = data_point['Song']
 
-        midi = Score(midi_dir)
+        midi = Score(midi_dir, ttype='quarter')
         n_bars = random.choice([4, 8, 16]) # Randomly choose amount of bars.
         if self.debug:
             self.logger.info(f"Processing: {midi_dir}, with {n_bars} bars splits.")
 
-        tracks = list(get_clipped_tracks(
+        tracks = get_clipped_tracks(
             midi,
             n_bars=n_bars, 
             zero_index=True,
-            ).items())
+            debug=False
+            )
+        if not tracks:
+            self.logger.info(f"\tWarning: {midi_dir}: Bar length too short.\n\t{midi.time_signatures[0]}")
+            return self.__getitem__(random.randint(0, len(self) - 1))
+
         n_tracks = len(tracks)
         
         # Randomly select a target track
         target_ix = random.choice(range(n_tracks))
-        tgt_name, tgt_parts = tracks[target_ix]
+        tgt_parts = tracks[target_ix]
         context = [tracks[i] for i in range(n_tracks) if i != target_ix]
 
         pairs = []
@@ -54,7 +58,7 @@ class MidiDataset(Dataset):
                 continue
             
             non_empty_parts = []
-            for cxt_name, cxt_parts in context:
+            for cxt_parts in context:
                 if len(cxt_parts[i]) <= 0:  # Skip empty contexts.
                     continue
                 non_empty_parts.append(cxt_parts[i])
@@ -68,12 +72,7 @@ class MidiDataset(Dataset):
             tgt_part, cxt_parts = random.choice(pairs)
 
             # Pad or truncate
-            if self.debug:
-                self.logger.info("\tTarget:")
             tgt_input, tgt_mask = self.pad_or_truncate(tgt_part)
-
-            if self.debug:
-                self.logger.info("\tContext:")
             cxt_input, cxt_mask = self.pad_or_truncate(self.concat_sequences(cxt_parts))
 
             return {
@@ -86,10 +85,8 @@ class MidiDataset(Dataset):
             }
         
         else:
-
             if self.debug:
-                self.logger.info(f"No non-empty parts found.")
-
+                self.logger.info(f"\tWarning: No non-empty parts found.")
             return self.__getitem__(random.randint(0, len(self) - 1))
     
     def concat_sequences(self, sequences):
@@ -105,14 +102,8 @@ class MidiDataset(Dataset):
         '''
         sequence_length = len(sequence)
         if sequence_length > self.max_seq_len:
-            if self.debug:
-                self.logger.info(f"\t\tTruncated, {sequence_length}")
-
             return (sequence[:self.max_seq_len], np.zeros(self.max_seq_len).astype(bool))
         else:
-            if self.debug:
-                self.logger.info("\t\tPadded")
-
             padding = [[-2, -2, -2, -2]] * (self.max_seq_len - sequence_length)
             mask = np.concatenate((np.zeros(sequence_length), np.ones(self.max_seq_len - sequence_length))).astype(bool)
             return (sequence + padding, mask)

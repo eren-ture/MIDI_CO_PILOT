@@ -37,6 +37,8 @@ class MidiTransformer(nn.Module):
 
         self.pos_enc = PositionalEncoding(embed_size, dropout)
 
+        self.abs = torch.abs
+
         self.transformer = nn.Transformer(
             d_model=embed_size,
             nhead=num_heads,
@@ -70,8 +72,7 @@ class MidiTransformer(nn.Module):
             tgt_key_padding_mask=tgt_mask.t()
         )
 
-        # return outs
-        return self.ff(outs)
+        return self.abs(self.ff(outs))
 
     def encode(self, src, src_mask):
 

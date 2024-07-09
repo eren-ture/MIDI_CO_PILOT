@@ -16,24 +16,46 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-def midi_loss_fn(output, target, tgt_mask):
-    # mask = tgt_mask.t().unsqueeze(-1).expand(-1, -1, 4)
-    # return torch.mean((output[~mask] - target[~mask])**2)
-    diff_sum = 0
-    non_padding_features = 0
+def mse(out, tgt):
+    return torch.mean((out-tgt)**2)
 
-    batch_size, seq_len, features = output.shape
-    mask = ~tgt_mask
-    for b in range(batch_size):
-        for i in range(seq_len):
-            if mask[b, i]:
-                for f in range(features):
-                    if not torch.isnan(output[b, i, f]):
-                        non_padding_features += 1
-                        diff_sum += torch.abs(output[b, i, f] - target[b, i, f])
+def midi_loss_fn(output, target):
+    out_mask = output[...,0].isnan()
+    tgt_mask = target[...,0] == -2
+    mask = ~(out_mask | tgt_mask)
 
-    print(f"\tLoss: {diff_sum / non_padding_features}")
-    return diff_sum / non_padding_features
+    out_times,      tgt_times       = output[...,0][mask], target[...,0][mask]
+    out_durations,  tgt_durations   = output[...,1][mask], target[...,1][mask]
+    out_pitches,    tgt_pitches     = output[...,2][mask], target[...,2][mask]
+    out_velocities, tgt_velocities  = output[...,3][mask], target[...,3][mask]
+
+    loss = mse(out_times, tgt_times) + mse(out_durations, tgt_durations) + mse(out_pitches, tgt_pitches) + mse(out_velocities, tgt_velocities)
+
+    print(f"\tLoss: {loss.item()}")
+    return loss
+
+# def midi_loss_fn(output, target, tgt_mask):
+#     diff_sum = 0
+#     non_nan_values = 0
+
+#     batch_size, seq_len, features = output.shape
+#     mask = ~tgt_mask  # Invert the mask to get non-padding positions
+
+#     for b in range(batch_size):
+#         for i in range(seq_len):
+#             if mask[b, i]:
+#                 for f in range(features):
+#                     if not torch.isnan(output[b, i, f]) and not torch.isnan(target[b, i, f]):
+#                         non_nan_values += 1
+#                         diff_sum += (output[b, i, f] - target[b, i, f])**2
+
+#     if non_nan_values == 0:
+#         return torch.tensor(0.0, requires_grad=True)
+
+#     epsilon = 1e-8
+#     loss = diff_sum / (non_nan_values + epsilon)
+#     print(f"\tLoss: {loss.item()}")
+#     return loss
 
 
 def train(model, train_dl, loss_fn, optim, opts):
@@ -51,20 +73,14 @@ def train(model, train_dl, loss_fn, optim, opts):
         tgt = batch['tgt_input'].float().to(DEVICE)
         tgt_mask = batch['tgt_mask'].to(DEVICE)
 
-        print(f"Source nan values: {src.isnan().sum()}")
-        print(f"Target nan values: {tgt.isnan().sum()}")
+        # print(f"Source nan values: {src.isnan().sum()}")
+        # print(f"Target nan values: {tgt.isnan().sum()}")
 
-        print("Checking for NaNs in gradients before step...")
-        for name, param in model.named_parameters():
-            if param.grad is not None:
-                if torch.isnan(param.grad).any():
-                    print(f"NaNs detected in gradients of {name}")
-
-        # We need to reshape the input slightly to fit into the transformer
-        # tgt_input = tgt[:-1, :]
-
-        # Create masks
-        # src_mask, tgt_mask, src_padding_mask, tgt_padding_mask = create_mask(src, tgt_input, [-2 , -2, -2, -2], DEVICE)
+        # print("Checking for NaNs in gradients before step...")
+        # for name, param in model.named_parameters():
+        #     if param.grad is not None:
+        #         if torch.isnan(param.grad).any():
+        #             print(f"NaNs detected in gradients of {name}")
 
         # Pass into model, get probability over the vocab out
         logits = model(src, tgt, src_mask, tgt_mask)
@@ -75,8 +91,10 @@ def train(model, train_dl, loss_fn, optim, opts):
                 print(f"NaNs detected in {name}")
 
         debug_logit, debug_target = logits[0], tgt[0]
-        print(debug_logit)
+        print("\tTarget:")
         print(debug_target)
+        print("\tOutput:")
+        print(debug_logit)
 
         # padding = torch.tensor([-2, -2, -2, -2])
         # n_null, n_padding = torch.isnan(debug_logit).sum(), (debug_target == padding).sum()
@@ -96,8 +114,20 @@ def train(model, train_dl, loss_fn, optim, opts):
 
         # Compute loss and gradient over that loss
         # loss = loss_fn(torch.flatten(logits), torch.flatten(tgt))
-        loss = loss_fn(logits, tgt, tgt_mask)
-        loss.backward()
+        loss = loss_fn(logits, tgt)
+        # loss.backward()
+
+        grads = torch.autograd.grad(loss, model.parameters(), create_graph=True, retain_graph=True)
+
+        # Apply gradients, ignoring NaN values
+        n_nan = 0
+        for grad, param in zip(grads, model.parameters()):
+            if torch.isnan(grad).any():
+                n_nan += 1
+                continue
+            param.grad = grad
+
+        print(f"{n_nan}/{count_parameters(model)} parameters are NaN")
 
         print("Checking for NaNs in gradients...")
         for name, param in model.named_parameters():
@@ -145,7 +175,7 @@ def validate(model, valid_dl, loss_fn):
         # Get original shape back, compute loss, accumulate that loss
         # tgt_out = tgt[1:, :]
         # loss = loss_fn(logits.flatten(), tgt.flatten())
-        loss = loss_fn(logits, tgt, tgt_mask)
+        loss = loss_fn(logits, tgt)
         losses += loss.item()
 
     # Return the average loss
@@ -170,7 +200,7 @@ def main(opts):
     # Get training data, tokenizer and vocab
     # objects as well as any special symbols we added to our dataset
 
-    train_dataset = MidiDataset(json_dir=opts.train_data_json_dir, max_seq_len=opts.max_seq_len)
+    train_dataset = MidiDataset(json_dir=opts.train_data_json_dir, max_seq_len=opts.max_seq_len, debug=False)
     train_dl = DataLoader(train_dataset, batch_size=opts.batch, shuffle=True)
 
     test_dataset = MidiDataset(json_dir=opts.test_data_json_dir, max_seq_len=opts.max_seq_len)
@@ -195,6 +225,11 @@ def main(opts):
         ).to(DEVICE)
 
     logging.info("Model created... starting training!")
+
+    if opts.model_path:
+        logging.info(f"Model loaded from: {opts.model_path}")
+        model.load_state_dict(torch.load(opts.model_path))
+
     logging.info(f"Number of parameters: {count_parameters(model)}")
 
     # Set up our learning tools
@@ -252,9 +287,9 @@ if __name__ == "__main__":
     # Training settings 
     parser.add_argument("-e", "--epochs", type=int, default=30,
                         help="Epochs")
-    parser.add_argument("--lr", type=float, default=1e-6,
+    parser.add_argument("--lr", type=float, default=1e-3,
                         help="Default learning rate")
-    parser.add_argument("--batch", type=int, default=32,
+    parser.add_argument("--batch", type=int, default=128,
                         help="Batch size")
     parser.add_argument("--backend", type=str, default="cpu",
                         help="Batch size")
@@ -262,9 +297,9 @@ if __name__ == "__main__":
     # Transformer settings
     parser.add_argument("--attn_heads", type=int, default=2,
                         help="Number of attention heads")
-    parser.add_argument("--enc_layers", type=int, default=2,
+    parser.add_argument("--enc_layers", type=int, default=6,
                         help="Number of encoder layers")
-    parser.add_argument("--dec_layers", type=int, default=2,
+    parser.add_argument("--dec_layers", type=int, default=6,
                         help="Number of decoder layers")
     parser.add_argument("--embed_size", type=int, default=512,
                         help="Size of the language embedding")
