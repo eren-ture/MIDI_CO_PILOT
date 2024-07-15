@@ -5,6 +5,7 @@ from symusic import Score
 from models.TransformerModel import MidiTransformer
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from tqdm import tqdm
 import logging
 import os
@@ -16,47 +17,50 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-def mse(out, tgt):
-    return torch.mean((out-tgt)**2)
+# def midi_loss_fn(output, target):
+#     '''
+#     MSE Loss
+#     '''
+#     out_mask = output[...,0].isnan()
+#     tgt_mask = target[...,0] == -2
+#     mask = ~(out_mask | tgt_mask)
 
-def midi_loss_fn(output, target):
-    out_mask = output[...,0].isnan()
-    tgt_mask = target[...,0] == -2
-    mask = ~(out_mask | tgt_mask)
+#     out_times,      tgt_times       = output[...,0][mask], target[...,0][mask]
+#     out_durations,  tgt_durations   = output[...,1][mask], target[...,1][mask]
+#     out_pitches,    tgt_pitches     = output[...,2][mask], target[...,2][mask]
+#     out_velocities, tgt_velocities  = output[...,3][mask], target[...,3][mask]
 
-    out_times,      tgt_times       = output[...,0][mask], target[...,0][mask]
-    out_durations,  tgt_durations   = output[...,1][mask], target[...,1][mask]
-    out_pitches,    tgt_pitches     = output[...,2][mask], target[...,2][mask]
-    out_velocities, tgt_velocities  = output[...,3][mask], target[...,3][mask]
+#     loss = F.mse_loss(out_times, tgt_times) + F.mse_loss(out_durations, tgt_durations) + F.mse_loss(out_pitches, tgt_pitches) + F.mse_loss(out_velocities, tgt_velocities)
 
-    loss = mse(out_times, tgt_times) + mse(out_durations, tgt_durations) + mse(out_pitches, tgt_pitches) + mse(out_velocities, tgt_velocities)
-
-    print(f"\tLoss: {loss.item()}")
-    return loss
-
-# def midi_loss_fn(output, target, tgt_mask):
-#     diff_sum = 0
-#     non_nan_values = 0
-
-#     batch_size, seq_len, features = output.shape
-#     mask = ~tgt_mask  # Invert the mask to get non-padding positions
-
-#     for b in range(batch_size):
-#         for i in range(seq_len):
-#             if mask[b, i]:
-#                 for f in range(features):
-#                     if not torch.isnan(output[b, i, f]) and not torch.isnan(target[b, i, f]):
-#                         non_nan_values += 1
-#                         diff_sum += (output[b, i, f] - target[b, i, f])**2
-
-#     if non_nan_values == 0:
-#         return torch.tensor(0.0, requires_grad=True)
-
-#     epsilon = 1e-8
-#     loss = diff_sum / (non_nan_values + epsilon)
 #     print(f"\tLoss: {loss.item()}")
 #     return loss
 
+def midi_loss_fn(output, target):
+    '''
+    MSE + Cross Entropy Loss
+    '''
+    out_mask = output.isnan()
+    tgt_mask = target == -2
+    mask = ~(out_mask | tgt_mask)
+
+    out_times,      tgt_times       = output[...,0][mask[...,0]], target[...,0][mask[...,0]]
+    out_durations,  tgt_durations   = output[...,1][mask[...,1]], target[...,1][mask[...,1]]
+
+    out_pitches,    tgt_pitches     = output[...,2:130][mask[...,2:130]], target[...,2:130][mask[...,2:130]]
+    out_velocities, tgt_velocities  = output[...,130:258][mask[...,130:258]], target[...,130:258][mask[...,130:258]]
+
+    time_loss =     F.mse_loss(out_times, tgt_times)
+    duration_loss = F.mse_loss(out_durations, tgt_durations)
+    pitch_loss =    F.cross_entropy(out_pitches.reshape(-1, 128), tgt_pitches.reshape(-1, 128))
+    velocity_loss = F.cross_entropy(out_velocities.reshape(-1, 128), tgt_velocities.reshape(-1, 128))
+
+    loss = time_loss + duration_loss + pitch_loss + velocity_loss
+    print(f"Time Loss:\t{time_loss}")
+    print(f"Duration Loss:\t{duration_loss}")
+    print(f"Pitch Loss:\t{pitch_loss}")
+    print(f"Velocity Loss:\t{velocity_loss}")
+    print(f"\tTotal Loss: {loss.item()}")
+    return loss + 1e-8
 
 def train(model, train_dl, loss_fn, optim, opts):
 
@@ -90,11 +94,11 @@ def train(model, train_dl, loss_fn, optim, opts):
             if torch.isnan(param).any():
                 print(f"NaNs detected in {name}")
 
-        debug_logit, debug_target = logits[0], tgt[0]
-        print("\tTarget:")
-        print(debug_target)
-        print("\tOutput:")
-        print(debug_logit)
+        # debug_logit, debug_target = logits[0], tgt[0]
+        # print("\tTarget:")
+        # print(debug_target)
+        # print("\tOutput:")
+        # print(debug_logit)
 
         # padding = torch.tensor([-2, -2, -2, -2])
         # n_null, n_padding = torch.isnan(debug_logit).sum(), (debug_target == padding).sum()
@@ -216,7 +220,7 @@ def main(opts):
 
     # Create model
     model = MidiTransformer(
-        embed_size=4,
+        embed_size=(2+128+128),
         num_encoder_layers=opts.enc_layers,
         num_decoder_layers=opts.dec_layers,
         num_heads=opts.attn_heads,
@@ -293,13 +297,13 @@ if __name__ == "__main__":
                         help="Batch size")
     parser.add_argument("--backend", type=str, default="cpu",
                         help="Batch size")
-  
+    
     # Transformer settings
     parser.add_argument("--attn_heads", type=int, default=2,
                         help="Number of attention heads")
-    parser.add_argument("--enc_layers", type=int, default=6,
+    parser.add_argument("--enc_layers", type=int, default=2,
                         help="Number of encoder layers")
-    parser.add_argument("--dec_layers", type=int, default=6,
+    parser.add_argument("--dec_layers", type=int, default=2,
                         help="Number of decoder layers")
     parser.add_argument("--embed_size", type=int, default=512,
                         help="Size of the language embedding")

@@ -72,7 +72,8 @@ class MidiDataset(Dataset):
             tgt_part, cxt_parts = random.choice(pairs)
 
             # Pad or truncate
-            tgt_input, tgt_mask = self.pad_or_truncate(tgt_part)
+            tgt_input, tgt_mask = self.pad_or_truncate(self.encode_sequence(tgt_part))
+            cxt_parts = [self.encode_sequence(part) for part in cxt_parts]
             cxt_input, cxt_mask = self.pad_or_truncate(self.concat_sequences(cxt_parts))
 
             return {
@@ -88,6 +89,11 @@ class MidiDataset(Dataset):
             if self.debug:
                 self.logger.info(f"\tWarning: No non-empty parts found.")
             return self.__getitem__(random.randint(0, len(self) - 1))
+        
+    def encode_sequence(self, sequence):
+        def one_hot(num):
+            return [1 if i == num else 0 for i in range(128)]
+        return [[t] + [d] + one_hot(p) + one_hot(v) for t, d, p, v in sequence]
     
     def concat_sequences(self, sequences):
         res = []
@@ -104,6 +110,6 @@ class MidiDataset(Dataset):
         if sequence_length > self.max_seq_len:
             return (sequence[:self.max_seq_len], np.zeros(self.max_seq_len).astype(bool))
         else:
-            padding = [[-2, -2, -2, -2]] * (self.max_seq_len - sequence_length)
+            padding = [[-2] * (2 + 128 + 128)] * (self.max_seq_len - sequence_length)
             mask = np.concatenate((np.zeros(sequence_length), np.ones(self.max_seq_len - sequence_length))).astype(bool)
             return (sequence + padding, mask)

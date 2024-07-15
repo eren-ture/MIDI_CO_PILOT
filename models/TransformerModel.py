@@ -39,6 +39,8 @@ class MidiTransformer(nn.Module):
 
         self.abs = torch.abs
 
+        self.softmax = torch.softmax
+
         self.transformer = nn.Transformer(
             d_model=embed_size,
             nhead=num_heads,
@@ -72,7 +74,20 @@ class MidiTransformer(nn.Module):
             tgt_key_padding_mask=tgt_mask.t()
         )
 
-        return self.abs(self.ff(outs))
+        out = self.ff(outs)
+        print(out.shape)
+
+        time = self.abs(out[...,0])
+        duration = self.abs(out[...,1])
+        pitch = self.softmax(out[...,2:130], dim=-1)
+        velocity = self.softmax(out[...,130:258], dim=-1)
+        print(time.shape)
+        print(duration.shape)
+        print(pitch.shape)
+        print(velocity.shape)
+
+        concatenated_output = torch.cat([time.unsqueeze(-1), duration.unsqueeze(-1), pitch, velocity], dim=-1)
+        return concatenated_output
 
     def encode(self, src, src_mask):
 
