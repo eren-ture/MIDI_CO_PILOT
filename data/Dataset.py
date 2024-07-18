@@ -107,6 +107,8 @@ class MidiDataset(Dataset):
         Returns (Padded/Truncated sequence, padding mask)
         '''
         sequence_length = len(sequence)
+        if sequence_length <= 0:
+            self.logger.info(f"***ERROR***: All padding detected.")
         if sequence_length > self.max_seq_len:
             return (sequence[:self.max_seq_len], np.zeros(self.max_seq_len).astype(bool))
         else:

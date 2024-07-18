@@ -29,9 +29,10 @@ class MidiTransformer(nn.Module):
             embed_size,
             num_encoder_layers=6,
             num_decoder_layers=6,
-            num_heads=2,
+            num_heads=6,
             dim_feedforward=2048,
-            dropout=0.1
+            dropout=0.1,
+            batch_first=True
         ):
         super(MidiTransformer, self).__init__()
 
@@ -47,7 +48,8 @@ class MidiTransformer(nn.Module):
             num_encoder_layers=num_encoder_layers,
             num_decoder_layers=num_decoder_layers,
             dim_feedforward=dim_feedforward,
-            dropout=dropout
+            dropout=dropout,
+            batch_first=batch_first
         )
 
         self.ff = nn.Linear(embed_size, embed_size)
@@ -67,24 +69,16 @@ class MidiTransformer(nn.Module):
         outs = self.transformer(
             src_emb,
             tgt_emb,
-            # src_mask=src_mask,
-            # tgt_mask=tgt_mask,
-            # None,
-            src_key_padding_mask=src_mask.t(),
-            tgt_key_padding_mask=tgt_mask.t()
+            src_key_padding_mask=src_mask,
+            tgt_key_padding_mask=tgt_mask
         )
 
         out = self.ff(outs)
-        print(out.shape)
 
         time = self.abs(out[...,0])
         duration = self.abs(out[...,1])
         pitch = self.softmax(out[...,2:130], dim=-1)
         velocity = self.softmax(out[...,130:258], dim=-1)
-        print(time.shape)
-        print(duration.shape)
-        print(pitch.shape)
-        print(velocity.shape)
 
         concatenated_output = torch.cat([time.unsqueeze(-1), duration.unsqueeze(-1), pitch, velocity], dim=-1)
         return concatenated_output

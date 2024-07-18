@@ -77,67 +77,13 @@ def train(model, train_dl, loss_fn, optim, opts):
         tgt = batch['tgt_input'].float().to(DEVICE)
         tgt_mask = batch['tgt_mask'].to(DEVICE)
 
-        # print(f"Source nan values: {src.isnan().sum()}")
-        # print(f"Target nan values: {tgt.isnan().sum()}")
-
-        # print("Checking for NaNs in gradients before step...")
-        # for name, param in model.named_parameters():
-        #     if param.grad is not None:
-        #         if torch.isnan(param.grad).any():
-        #             print(f"NaNs detected in gradients of {name}")
-
-        # Pass into model, get probability over the vocab out
         logits = model(src, tgt, src_mask, tgt_mask)
-
-        print("Checking for NaNs in intermediate outputs...")
-        for name, param in model.named_parameters():
-            if torch.isnan(param).any():
-                print(f"NaNs detected in {name}")
-
-        # debug_logit, debug_target = logits[0], tgt[0]
-        # print("\tTarget:")
-        # print(debug_target)
-        # print("\tOutput:")
-        # print(debug_logit)
-
-        # padding = torch.tensor([-2, -2, -2, -2])
-        # n_null, n_padding = torch.isnan(debug_logit).sum(), (debug_target == padding).sum()
-
-        # print(f"\tNull seq: {n_null}")
-        # print(f"\tPad seq: {n_padding}\n")
-
-        # print(f"Logits Shape:\t\t{logits.shape}")
-        # print(f"Target Shape:\t\t{tgt.shape}")
-        # print(f"Target Mask Shape:\t{tgt_mask.shape}")
 
         # Reset gradients before we try to compute the gradients over the loss
         optim.zero_grad()
 
-        # Get original shape back
-        # tgt_out = tgt[1:, :]
-
-        # Compute loss and gradient over that loss
-        # loss = loss_fn(torch.flatten(logits), torch.flatten(tgt))
         loss = loss_fn(logits, tgt)
-        # loss.backward()
-
-        grads = torch.autograd.grad(loss, model.parameters(), create_graph=True, retain_graph=True)
-
-        # Apply gradients, ignoring NaN values
-        n_nan = 0
-        for grad, param in zip(grads, model.parameters()):
-            if torch.isnan(grad).any():
-                n_nan += 1
-                continue
-            param.grad = grad
-
-        print(f"{n_nan}/{count_parameters(model)} parameters are NaN")
-
-        print("Checking for NaNs in gradients...")
-        for name, param in model.named_parameters():
-            if param.grad is not None:
-                if torch.isnan(param.grad).any():
-                    print(f"NaNs detected in gradients of {name}")
+        loss.backward()
 
         # Step weights
         optim.step()
@@ -299,7 +245,7 @@ if __name__ == "__main__":
                         help="Batch size")
     
     # Transformer settings
-    parser.add_argument("--attn_heads", type=int, default=2,
+    parser.add_argument("--attn_heads", type=int, default=6,
                         help="Number of attention heads")
     parser.add_argument("--enc_layers", type=int, default=2,
                         help="Number of encoder layers")
