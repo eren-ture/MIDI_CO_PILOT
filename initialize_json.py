@@ -31,6 +31,11 @@ def get_song_details(dir):
     if len(tempos) > 1:
         print(f'MULTI TEMPO: {dir}')
         return None
+    elif len(tempos) > 0:
+        t_sig = tempos[0]
+        if t_sig[0] * (4 / t_sig[1]) < 1:
+            print(f'BAR LENGTH TOO SHORT: {dir}')
+            return None
 
     # Discard songs with multiple keys.
     keys = midi.key_signatures
@@ -40,14 +45,17 @@ def get_song_details(dir):
 
     song = {
         'Midi_Directory': dir,
-        'Artist': dir.split('/')[-2],
-        'Song': dir.split('/')[-1][:-4]
+        'Artist': dir.split('\\')[-2],
+        'Song': dir.split('\\')[-1][:-4]
     }
     return song
 
 
+## SET VALUES ##
+data_folder = '.\\archive'
+train_percentage = 0.85
+
 data = []
-data_folder = './archive'
 
 for root, dirs, files in os.walk(data_folder):
     for file in files:
@@ -59,7 +67,6 @@ for root, dirs, files in os.walk(data_folder):
             data.append(song_details)
 
 random.Random(42).shuffle(data)
-train_percentage = 0.85
 train_cutoff = int(len(data)*train_percentage)
 
 print(f"Number of songs: {len(data)}")
@@ -68,10 +75,10 @@ print(f"{train_percentage} train data")
 train_data = data[:train_cutoff]
 test_data = data[train_cutoff:]
 
-train_file_path = "data/train_data.json"
+train_file_path = "data\\train_data.json"
 with open(train_file_path, "w") as json_file:
     json.dump(train_data, json_file, indent=4)
 
-test_file_path = "data/test_data.json"
+test_file_path = "data\\test_data.json"
 with open(test_file_path, "w") as json_file:
     json.dump(test_data, json_file, indent=4)

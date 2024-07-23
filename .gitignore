@@ -1,4 +1,6 @@
 **/logs
 **/__pycache__
-trial_notebook.ipynb
 **/archive
+**/train_out
+trial_notebook.ipynb
+notebook.ipynb

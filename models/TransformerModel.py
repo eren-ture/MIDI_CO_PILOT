@@ -1,6 +1,7 @@
 import math
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 class PositionalEncoding(nn.Module):
     def __init__(
@@ -38,9 +39,9 @@ class MidiTransformer(nn.Module):
 
         self.pos_enc = PositionalEncoding(embed_size, dropout)
 
-        self.abs = torch.abs
+        self.relu = F.relu
 
-        self.softmax = torch.softmax
+        self.softmax = F.softmax
 
         self.transformer = nn.Transformer(
             d_model=embed_size,
@@ -52,7 +53,12 @@ class MidiTransformer(nn.Module):
             batch_first=batch_first
         )
 
-        self.ff = nn.Linear(embed_size, embed_size)
+        # self.ff = nn.Linear(embed_size, embed_size)
+
+        self.time_ff = nn.Linear(embed_size, 1)
+        self.duration_ff = nn.Linear(embed_size, 1)
+        self.pitch_ff = nn.Linear(embed_size, 128)
+        self.velocity_ff = nn.Linear(embed_size, 128)
 
         self._init_weights()
 
@@ -61,7 +67,7 @@ class MidiTransformer(nn.Module):
             if p.dim() > 1:
                 nn.init.xavier_uniform_(p)
     
-    def forward(self, src, trg, src_mask, tgt_mask): #, src_padding_mask, tgt_padding_mask, memory_key_padding_mask):
+    def forward(self, src, trg, src_mask, tgt_mask):
 
         src_emb = self.pos_enc(src)
         tgt_emb = self.pos_enc(trg)
@@ -73,14 +79,19 @@ class MidiTransformer(nn.Module):
             tgt_key_padding_mask=tgt_mask
         )
 
-        out = self.ff(outs)
+        time = self.time_ff(outs)
+        time = self.relu(time)
 
-        time = self.abs(out[...,0])
-        duration = self.abs(out[...,1])
-        pitch = self.softmax(out[...,2:130], dim=-1)
-        velocity = self.softmax(out[...,130:258], dim=-1)
+        duration = self.duration_ff(outs)
+        duration = self.relu(duration)
 
-        concatenated_output = torch.cat([time.unsqueeze(-1), duration.unsqueeze(-1), pitch, velocity], dim=-1)
+        pitch = self.pitch_ff(outs)
+        # pitch = self.softmax(pitch, dim=-1)
+
+        velocity = self.velocity_ff(outs)
+        # velocity = self.softmax(velocity, dim=-1)
+
+        concatenated_output = torch.cat([time, duration, pitch, velocity], dim=-1)
         return concatenated_output
 
     def encode(self, src, src_mask):
