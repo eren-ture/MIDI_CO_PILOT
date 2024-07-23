@@ -69,7 +69,7 @@ def midi_loss_fn(output, target):
         velocity_loss       # Velocity Loss
     )
 
-def train(model, train_dl, loss_fn, optim, opts):
+def train(model, train_dl, loss_fn, optim, scheduler, opts):
 
     # Objects for accumulating losses
     losses = 0
@@ -107,6 +107,9 @@ def train(model, train_dl, loss_fn, optim, opts):
 
         # Step weights
         optim.step()
+
+        # Step scheduled lr
+        scheduler.step()
 
         # Accumulate a running loss for reporting
         losses += loss.item()
@@ -223,14 +226,23 @@ def main(opts):
     # These special values are from the "Attention is all you need" paper
     optim = torch.optim.Adam(model.parameters(), lr=opts.lr, betas=(0.9, 0.98), eps=1e-9)
 
+    scheduler = torch.optim.lr_scheduler.CyclicLR(optim, base_lr=opts.lr, max_lr=0.1, step_size_up=252)
+
     best_val_loss = 1e6
     
     for idx, epoch in enumerate(range(1, opts.epochs+1)):
 
         start_time = time()
-        train_loss, train_time_l, train_drtn_l, train_ptch_l, train_velo_l = train(model, train_dl, loss_fn, optim, opts)
+        train_loss, train_time_l, train_drtn_l, train_ptch_l, train_velo_l = train(model,
+                                                                                   train_dl,
+                                                                                   loss_fn,
+                                                                                   optim,
+                                                                                   scheduler,
+                                                                                   opts)
         epoch_time = time() - start_time
-        test_loss, test_time_l, test_drtn_l, test_ptch_l, test_velo_l = validate(model, test_dl, loss_fn)
+        test_loss, test_time_l, test_drtn_l, test_ptch_l, test_velo_l = validate(model,
+                                                                                 test_dl,
+                                                                                 loss_fn)
 
         # Once training is done, we want to save out the model
         if test_loss < best_val_loss:
@@ -241,7 +253,7 @@ def main(opts):
         torch.save(model.state_dict(), opts.logging_dir + "last.pt")
 
         # logger.info(f"Epoch: {epoch}\n\tTrain loss: {train_loss:.3f}\n\tVal loss: {test_loss:.3f}\n\tEpoch time = {epoch_time:.1f} seconds\n\tETA = {epoch_time*(opts.epochs-idx-1):.1f} seconds")
-        logger.info(f"""Epoch: {epoch}
+        logger.info(f"""Epoch: {epoch}, Last LR: {scheduler.get_last_lr()}
     Total Train Loss: {train_loss:.3f}
         Time:   {train_time_l:.3f}
         Duration:   {train_drtn_l:.3f}
