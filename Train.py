@@ -131,6 +131,7 @@ def train(model, train_dl, loss_fn, optim, scheduler, opts):
         )
 
 # Check the model accuracy on the validation dataset
+@torch.no_grad()
 def validate(model, valid_dl, loss_fn):
 
     # Object for accumulating losses
