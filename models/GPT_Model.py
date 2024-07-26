@@ -86,9 +86,9 @@ class MidiGPT(nn.Module):
                  pitch_size,
                  velocity_size,
                  n_embed_pitch = 64,
-                 n_embed_velocity = 8,
+                 n_embed_velocity = 9,
                  n_layer = 3,
-                 n_head = 8,
+                 n_head = 5,
                  block_size = 512,
                  dropout = 0.1
                  ):
@@ -99,7 +99,7 @@ class MidiGPT(nn.Module):
         self.velocity_embedding = nn.Embedding(velocity_size, n_embed_velocity)
 
         self.total_emb_size = 2 + n_embed_pitch + n_embed_velocity
-        assert self.total_emb_size % n_head == 0, "Total embedding size should be divisible by n_heads."
+        assert self.total_emb_size % n_head == 0, f"Total Embedding Size ({self.total_emb_size}) % num head ({n_head}) has to be 0."
 
         self.blocks = nn.Sequential(*[Block(self.total_emb_size, n_head, block_size, dropout) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(self.total_emb_size)
@@ -121,12 +121,14 @@ class MidiGPT(nn.Module):
 
     def forward(self, cxt, tgt=None):
 
+        B, T, _ = cxt.shape
+
         x = torch.cat(      # (B, T, total_emb_size)
             [
                 cxt[...,0].unsqueeze(-1),           # Float Time
                 cxt[...,1].unsqueeze(-1),           # Float Duration
-                self.pitch_embedding(cxt[...,2]),   # Embedded Pitch
-                self.velocity_embedding(cxt[...,3]) # Embedded Velocity
+                self.pitch_embedding(cxt[...,2].to(torch.int64)),   # Embedded Pitch
+                self.velocity_embedding(cxt[...,3].to(torch.int64)) # Embedded Velocity
             ],
             dim=-1
         )
@@ -141,4 +143,25 @@ class MidiGPT(nn.Module):
         if tgt is None:
             loss = None
         else:
-            
+            padding_mask = ~(tgt[...,2] == 129)
+            n_emb_pitch = out_pitch.shape[-1]
+            n_emb_velocity = out_velocity.shape[-1]
+
+            w_t, time_loss          = 1, F.mse_loss(out_time[padding_mask].flatten(), tgt[...,0][padding_mask])
+            w_d, duration_loss      = 1, F.mse_loss(out_duration[padding_mask].flatten(), tgt[...,1][padding_mask])
+            w_p, pitch_loss         = 1, F.cross_entropy(out_pitch.view(B*T, n_emb_pitch), tgt[...,2].view(B*T).to(torch.int64), ignore_index=129)
+            w_v, velocity_loss      = 1, F.cross_entropy(out_velocity.view(B*T, n_emb_velocity), tgt[...,3].view(B*T).to(torch.int64), ignore_index=129)
+
+            loss = (w_t * time_loss) + (w_d * duration_loss) + (w_p * pitch_loss) + (w_v * velocity_loss)
+
+        logits = torch.cat(
+            [
+                out_time,
+                out_duration,
+                out_pitch,
+                out_velocity
+            ],
+            dim=-1
+        )
+
+        return logits, loss
