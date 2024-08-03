@@ -1,6 +1,6 @@
 from torch.utils.data import Dataset
 import torch.nn.functional as F
-from utils import track_to_list, get_clipped_tracks
+from src_Transformer.utils import track_to_list, get_clipped_tracks
 from symusic import Score
 import numpy as np
 import random

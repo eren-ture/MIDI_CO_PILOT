@@ -1,7 +1,5 @@
 from symusic import Score
 from matplotlib import pyplot as plt
-import numpy as np
-import torch
 import math
 
 
@@ -51,7 +49,7 @@ def get_clipped_tracks(midi,
         time_sig = (4, 4)
 
     # Initialize variables
-    bar_length = time_sig[0] * (4 / time_sig[1])
+    bar_length = time_sig[0] * (4 / time_sig[1]) # in Quarter notes
     if bar_length < 1:
         return []
     first_note_time = min(t.notes[0].time for t in midi.tracks if t.notes)

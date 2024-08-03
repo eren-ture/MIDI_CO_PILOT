@@ -17,8 +17,10 @@ class Head(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        # input of size (batch, time-step, channels)
-        # output of size (batch, time-step, head size)
+        '''
+        input of size (batch, time-step, channels)\n
+        output of size (batch, time-step, head size)
+        '''
         B,T,C = x.shape
         k = self.key(x)   # (B,T,hs)
         q = self.query(x) # (B,T,hs)
