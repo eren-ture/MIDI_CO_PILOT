@@ -87,8 +87,10 @@ class MidiTransformer(nn.Module):
         out_duration = self.relu(out_duration)  # B, T, 1
 
         out_pitch = self.pitch_ff(outs)         # B, T, 131
+        chosen_pitch = torch.argmax(out_pitch, dim=-1, keepdim=True)
 
         out_velocity = self.velocity_ff(outs)   # B, T, 131
+        chosen_velocity = torch.argmax(out_velocity, dim=-1, keepdim=True)
 
         padding_mask = ~(tgt[...,2] == 130)
 
@@ -103,7 +105,7 @@ class MidiTransformer(nn.Module):
         v_loss = w_v * velocity_loss
         total_loss = t_loss + d_loss + p_loss + v_loss
 
-        concatenated_output = torch.cat([out_time, out_duration, out_pitch, out_velocity], dim=-1)
+        concatenated_output = torch.cat([out_time, out_duration, chosen_pitch, chosen_velocity], dim=-1)
         return concatenated_output, total_loss, t_loss, d_loss, p_loss, v_loss
     
     def embed_all(self, x):
@@ -121,14 +123,20 @@ class MidiTransformer(nn.Module):
 
         return torch.cat([drtn_input, ptch_input, velo_input], dim=-1) + pos_enc
 
-    def encode(self, src, src_mask):
+    def encode(self, src, src_mask, src_padding_mask):
 
         pos_enc = self.embed_all(src)
 
-        return self.transformer.encoder(pos_enc, src_mask)
+        return self.transformer.encoder(pos_enc, src_mask, src_key_padding_mask=src_padding_mask)
 
     def decode(self, tgt, memory, tgt_mask):
 
         pos_enc = self.embed_all(tgt)
+
+        print("Tgt Mask Size:", tgt_mask.shape)
+
+        tgt_mask = tgt_mask.repeat(self.num_heads, 1, 1)
+
+        print("In Tgt Mask Size:", tgt_mask.shape)
 
         return self.transformer.decoder(pos_enc, memory, tgt_mask)

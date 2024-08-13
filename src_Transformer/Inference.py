@@ -28,11 +28,13 @@ def create_time_weighted_attention_mask(times, decay=0.2, device=DEVICE):
 
     times = times.to(device)
 
+    print("Time shape:", times.shape)
+
     seq_length = times.size(0)
     causal_mask = torch.tril(torch.ones(seq_length, seq_length, device=device))
     
     # Expand times to [seq_length, seq_length] for broadcasting
-    times_expanded = times.unsqueeze(0).expand(seq_length, -1)
+    times_expanded = times.expand(seq_length, -1)
     
     # Calculate the relative times for each pair of tokens
     relative_times = torch.abs(times_expanded - times_expanded.t())  # [seq_length, seq_length]
@@ -59,7 +61,7 @@ def midi_to_src(midi):
             note.duration = quantize_to_32nds(note.duration)
 
         # Append track to source
-        source.expand(track_to_list(track))
+        source.extend(track_to_list(track))
 
     # Pad or truncate source
     seq_len = len(source)
@@ -73,7 +75,7 @@ def midi_to_src(midi):
         source = torch.as_tensor(source + padding)
         pad_mask = mask.masked_fill(mask == 1, float('-inf'))
 
-    return source, pad_mask
+    return source.to(DEVICE), pad_mask.to(DEVICE)
 
 
 @torch.no_grad()
@@ -81,20 +83,35 @@ def infer(model, midi, max_len = config.max_seq_len):
 
     model.eval()
 
-    src = midi_to_src(midi).to(DEVICE)
+    src, padding_mask = midi_to_src(midi)
     T, C = src.shape
 
-    src_mask = torch.zeros(T, T).type(float).to(DEVICE)
+    src_mask = torch.zeros(1, T, T).type(torch.float).to(DEVICE)
 
-    memory = model.encode(src, src_mask).to(DEVICE)
+    memory = model.encode(src.unsqueeze(0), None, None).to(DEVICE)
 
-    ys = torch.as_tensor([[0, 0, config.symbols['bot'], config.symbols['bot']]]).type(torch.float).to(DEVICE)
+    # ys = torch.as_tensor([[[0, 0, config.symbols['bot'], config.symbols['bot']]]]).type(torch.float).to(DEVICE)
+    ys = torch.as_tensor([[[0, 0, 64, 64]]]).type(torch.float).to(DEVICE)
 
-    for _ in range(max_len-1):
 
-        tgt_mask = create_time_weighted_attention_mask(ys[:, 0], decay=config.attn_mask_time_weight_decay)
-        outs = model.decode(ys, memory, tgt_mask)       # T, embed_size
-        out = outs[:-1]                                 # embed_size
+    for i in range(max_len-1):
+
+        print(f"\tNote {i}")
+
+        tgt_mask = create_time_weighted_attention_mask(ys[..., 0], decay=config.attn_mask_time_weight_decay, device=DEVICE)
+
+        # print(out)
+        
+        print('Ys')
+        print(ys)
+        print(ys.shape)
+
+        # print("Out shape:", out.shape)
+        print("Target mask:", tgt_mask)
+
+        outs = model.decode(ys, memory, tgt_mask)       # 1, T, embed_size
+        out = outs[:, -1, :]                            # 1, 1, embed_size
+
 
         out_time = model.time_ff(out)                   # 1
         out_time = model.relu(out_time)                 # 1
@@ -110,10 +127,14 @@ def infer(model, midi, max_len = config.max_seq_len):
         out_velocity = model.velocity_ff(out)           # 131
         out_velocity = torch.argmax(out_velocity)
 
-        next_note = torch.as_tensor([out_time, out_duration, out_pitch, out_velocity]).type(torch.float)
+        next_note = torch.as_tensor([[out_time, out_duration, out_pitch, out_velocity]]).type(torch.float).unsqueeze(0).to(DEVICE)
 
-        ys = torch.cat([ys, next_note], dim=0)
-        if (out_pitch >= config.symbol['eot']) or (out_velocity >= config.symbol['eot']):
+        print('Next Note')
+        print(next_note)
+        print(next_note.shape)
+
+        ys = torch.cat([ys, next_note], dim=1)
+        if (out_pitch >= config.symbols['eot']) or (out_velocity >= config.symbols['eot']):
             break
 
     return ys
@@ -126,7 +147,7 @@ def main(opts):
     model = MidiTransformer(**config.hyperparameters).to(DEVICE)
     model.load_state_dict(torch.load(opts.model_path))
 
-    midi = symusic.Score(opts.midi_path)
+    midi = symusic.Score(opts.midi_path, ttype='quarter')
 
     output = infer(model, midi, max_len=config.max_seq_len)
 

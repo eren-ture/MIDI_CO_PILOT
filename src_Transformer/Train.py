@@ -34,7 +34,12 @@ def train(model, train_dl, optim, opts):
         src_padding_mask = batch['cxt_padding_mask'].to(DEVICE)
         tgt_padding_mask = batch['tgt_padding_mask'].to(DEVICE)
 
-        _, loss, t_loss, d_loss, p_loss, v_loss = model(src, tgt, src_mask, tgt_mask, src_padding_mask, tgt_padding_mask)
+        print(f"Source:\n{src[0]}")
+        print(f"Target:\n{tgt[0]}")
+
+        out, loss, t_loss, d_loss, p_loss, v_loss = model(src, tgt, src_mask, tgt_mask, src_padding_mask, tgt_padding_mask)
+
+        print(f"Output:\n{out[0]}")
 
         # show_src, show_tgt, show_out = src[0].cpu().detach().numpy(), tgt[0].cpu().detach().numpy(), logits[0].cpu().detach().numpy()
         # file_nm = i
